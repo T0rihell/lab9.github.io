@@ -161,40 +161,66 @@ img:hover {
   color: #d81b60;
 }
 @media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
   h1 {
-    font-size: 26px;
+    font-size: 28px;
+    margin-bottom: 20px;
   }
 
   .container {
     flex-direction: column;
-    gap: 30px;
-    margin-top: 20px;
+    gap: 20px;
+    align-items: center;
   }
 
-  .player {
-    width: 90%;
-    padding: 15px;
+  .player-user {
+    order: 1;
+  }
+
+  .center {
+    order: 2;
+  }
+
+  .player-comp {
+    order: 3;
   }
 
   img {
-    width: 150px;
-    height: 210px;
-  }
-
-  .score {
-    font-size: 24px;
-    padding: 8px 15px;
+    width: 180px;
+    height: 240px;
   }
 
   #generateBtn,
   #restartBtn {
-    font-size: 18px;
-    padding: 12px 25px;
+    font-size: 20px;
+    padding: 12px 30px;
+  }
+
+  .score {
+    font-size: 24px;
   }
 
   .modal-content {
     width: 85%;
-    padding: 20px;
   }
 }
-  
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  img {
+    width: 150px;
+    height: 200px;
+  }
+
+  #generateBtn,
+  #restartBtn {
+    width: 80%;
+    font-size: 18px;
+  }
+}
