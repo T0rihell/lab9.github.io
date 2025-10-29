@@ -1,9 +1,5 @@
 const suits = ["clubs", "diamonds", "hearts", "spades"];
 const ranks = [
-  { name: "2", value: 2 },
-  { name: "3", value: 3 },
-  { name: "4", value: 4 },
-  { name: "5", value: 5 },
   { name: "6", value: 6 },
   { name: "7", value: 7 },
   { name: "8", value: 8 },
@@ -30,14 +26,12 @@ let userScore = 0;
 let compScore = 0;
 let round = 1;
 
-let userName = prompt("Введіть ваше ім'я:");
-
-while (userName === null || userName.trim() === "") {
-  userName = prompt("Ім'я є обов'язковим! Введіть своє ім'я або псевдонім:");
+let playerName = prompt("Введіть ваше ім'я:");
+while (playerName === null || playerName.trim() === "") {
+  playerName = prompt("Ім'я є обов'язковим! Введіть своє ім'я або псевдонім:");
 }
-
-document.getElementById('userName').textContent = userName;
-
+playerName = playerName.trim();
+document.getElementById("playerName").textContent = playerName;
 
 const generateBtn = document.getElementById("generateBtn");
 const restartBtn = document.getElementById("restartBtn");
@@ -71,18 +65,16 @@ function playRound() {
 
 function showResult() {
   let message = "";
-
   if (userScore > compScore) {
-    message = `${userName}, ви виграли!`;
+    message = `${playerName}, ви виграли!`;
   } else if (userScore < compScore) {
-    message = `Цього разу ви програли.`;
+    message = `Цього разу переміг комп’ютер`;
   } else {
-    message = "Нічия!";
+    message = "Нічия";
   }
 
   modal.style.display = "block";
   modalText.textContent = message;
-
   generateBtn.style.display = "none";
   restartBtn.style.display = "inline-block";
 }

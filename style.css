@@ -67,7 +67,7 @@ img:hover {
   justify-content: center;
 }
 
-#generateBtn {
+#generateBtn, #restartBtn {
   background: #f50057;
   color: white;
   font-size: 22px;
@@ -88,30 +88,12 @@ img:hover {
 
 #restartBtn {
   background: #ff80c0;
-  color: white;
-  font-size: 22px;
-  font-weight: bold;
-  border: none;
-  border-radius: 14px;
-  padding: 15px 35px;
-  cursor: pointer;
-  box-shadow: 0 0 20px #f8bbd0;
-  transition: all 0.3s ease;
-  margin-top: 15px;
 }
 
 #restartBtn:hover {
   background: #ffb6f9;
   color: #880e4f;
   transform: scale(1.05);
-}
-
-#result {
-  margin-top: 30px;
-  font-size: 26px;
-  font-weight: bold;
-  color: #ad1457;
-  text-shadow: 1px 1px #ffe6f9;
 }
 
 .modal {
@@ -138,17 +120,6 @@ img:hover {
   animation: fadeIn 0.4s ease;
 }
 
-.modal-content h2 {
-  color: #d81b60;
-  margin-bottom: 10px;
-}
-
-.modal-content p {
-  font-size: 20px;
-  color: #880e4f;
-  margin-top: 10px;
-}
-
 .close {
   color: #ff4081;
   float: right;
@@ -160,21 +131,13 @@ img:hover {
 .close:hover {
   color: #d81b60;
 }
+
 @media (max-width: 768px) {
-  body {
-    background: linear-gradient(180deg, #ffd6f5, #ffb6f9, #ffe6f9);
-  }
-
-  h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-
   .container {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 25px;
-    width: 100%;
     max-width: 400px;
     margin: 0 auto;
   }
@@ -193,40 +156,22 @@ img:hover {
 
   .player {
     width: 90%;
-    max-width: 320px;
     background: linear-gradient(145deg, #ffccf9, #ffd9fa);
     border-radius: 25px;
     padding: 20px;
     box-shadow: 0 10px 25px rgba(255, 105, 180, 0.4);
   }
 
-  .player h2 {
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: #b3005e;
-  }
-
   .score {
     font-size: 24px;
     width: 70px;
     margin: 10px auto;
-    background: #ff4081;
   }
 
   img {
     width: 170px;
     height: 230px;
     margin: 0 auto;
-    display: block;
-  }
-
-  .center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    box-shadow: none;
   }
 
   #round {
@@ -235,38 +180,8 @@ img:hover {
     margin-bottom: 10px;
   }
 
-  #generateBtn,
-  #restartBtn {
-    background: #ff4081;
-    color: white;
+  #generateBtn, #restartBtn {
     font-size: 18px;
-    border: none;
-    border-radius: 14px;
     padding: 12px 28px;
-    cursor: pointer;
-    box-shadow: 0 0 20px #ff80ab;
-    transition: all 0.3s ease;
-  }
-
-  #generateBtn:hover {
-    background: #ff66b2;
-  }
-
-  #restartBtn {
-    background: #ffb6f9;
-    color: #880e4f;
-  }
-
-  @media (max-width: 480px) {
-    img {
-      width: 140px;
-      height: 190px;
-    }
-
-    #generateBtn,
-    #restartBtn {
-      width: 80%;
-      font-size: 16px;
-    }
   }
 }

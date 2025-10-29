@@ -3,25 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Гра 21</title>
+  <title>Гра «21»</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <h1>Гра «21»</h1>
+
   <div class="container">
-    <div class="player">
-      <h2 id="userName">Користувач</h2>
+    <div class="player player-user">
+      <h2 id="playerName">Гравець</h2>
       <div class="score" id="userScore">0</div>
-      <img id="userCard" src="cards/back.png" alt="Карта користувача">
+      <img id="userCard" src="cards/back.png" alt="Карта гравця">
     </div>
 
     <div class="center">
       <p id="round">Спроба 1 з 3</p>
       <button id="generateBtn">Зіграти</button>
-      <button id="restartBtn" style="display: none;">Грати знову</button>
+      <button id="restartBtn" style="display:none;">Грати знову</button>
     </div>
 
-    <div class="player">
+    <div class="player player-comp">
       <h2>Комп’ютер</h2>
       <div class="score" id="compScore">0</div>
       <img id="compCard" src="cards/back.png" alt="Карта комп’ютера">
@@ -31,7 +33,7 @@
   <div id="modal" class="modal">
     <div class="modal-content">
       <span id="closeModal" class="close">&times;</span>
-      <h2 id="modalTitle">Результат гри</h2>
+      <h2>Результат гри</h2>
       <p id="modalText"></p>
     </div>
   </div>
