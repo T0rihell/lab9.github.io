@@ -115,7 +115,7 @@ img:hover {
 }
 
 .modal {
-  display: none; /* спочатку приховано */
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -160,7 +160,7 @@ img:hover {
 .close:hover {
   color: #d81b60;
 }
-@media (max-width: 430px) {
+@media (max-width: 768px) {
   body {
     background: linear-gradient(180deg, #ffd6f5, #ffb6f9, #ffe6f9);
   }
@@ -174,8 +174,21 @@ img:hover {
     flex-direction: column;
     align-items: center;
     gap: 25px;
-    max-width: 360px;
+    width: 100%;
+    max-width: 400px;
     margin: 0 auto;
+  }
+
+  .player-user {
+    order: 1;
+  }
+
+  .center {
+    order: 2;
+  }
+
+  .player-comp {
+    order: 3;
   }
 
   .player {
@@ -190,18 +203,19 @@ img:hover {
   .player h2 {
     font-size: 20px;
     margin-bottom: 5px;
+    color: #b3005e;
   }
 
   .score {
     font-size: 24px;
-    padding: 6px 0;
     width: 70px;
     margin: 10px auto;
+    background: #ff4081;
   }
 
   img {
-    width: 160px;
-    height: 220px;
+    width: 170px;
+    height: 230px;
     margin: 0 auto;
     display: block;
   }
@@ -210,12 +224,15 @@ img:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    order: 2;
+    justify-content: center;
+    background: transparent;
+    box-shadow: none;
   }
 
   #round {
-    margin: 10px 0;
+    font-size: 16px;
     color: #880e4f;
+    margin-bottom: 10px;
   }
 
   #generateBtn,
@@ -240,15 +257,16 @@ img:hover {
     color: #880e4f;
   }
 
-  .player-user {
-    order: 1;
-  }
+  @media (max-width: 480px) {
+    img {
+      width: 140px;
+      height: 190px;
+    }
 
-  .center {
-    order: 2;
-  }
-
-  .player-comp {
-    order: 3;
+    #generateBtn,
+    #restartBtn {
+      width: 80%;
+      font-size: 16px;
+    }
   }
 }
