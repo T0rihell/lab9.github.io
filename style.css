@@ -160,7 +160,7 @@ img:hover {
 .close:hover {
   color: #d81b60;
 }
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   body {
     background: linear-gradient(180deg, #ffd6f5, #ffb6f9, #ffe6f9);
   }
@@ -250,25 +250,5 @@ img:hover {
 
   .player-comp {
     order: 3;
-  }
-}
-@media (max-width: 480px) {
-  h1 {
-    font-size: 24px;
-  }
-
-  img {
-    width: 140px;
-    height: 190px;
-  }
-
-  .score {
-    font-size: 20px;
-  }
-
-  #generateBtn,
-  #restartBtn {
-    width: 80%;
-    font-size: 16px;
   }
 }
